@@ -46,6 +46,9 @@ app.get('/books', async (req, res) => {
   const books = await Book.find();
   res.json(books);
 });
+app.get('/',(req,res)=>{
+  res.send('<h1>Hello and welcome to my book management library</h1>')
+})
 
 // Get a specific book by ID
 app.get('/books/:id', async (req, res) => {
